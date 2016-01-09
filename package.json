@@ -1,27 +1,31 @@
 {
-  "name": "wait-run",
-  "version": "1.1.0",
-  "description": "Wait for a file or directory to change then run a command",
+  "name": "just-wait",
+  "version": "0.1.0",
+  "description": "Wait for a file or directory to change then just return",
   "main": "index.js",
   "scripts": {},
   "author": "Rick Wong",
+  "contributors": [
+    {
+      "name": "Stijn de Witt"
+    }
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/RickWong/wait-run.git"
+    "url": "https://github.com/download/just-wait.git"
   },
-  "homepage": "https://github.com/RickWong/wait-run",
-  "license": "BSD-3-Clause",
+  "homepage": "https://github.com/download/just-wait",
+  "license": "CC-BY-4.0",
   "dependencies": {
+    "chalk": "^1.1.1",
     "commander": "2.9.0",
     "gaze": "0.5.2",
-    "passthru": "0.4.0"
+    "picolog": "^1.0.0"
   },
   "keywords": [
     "wait",
     "file",
     "directory",
-    "run",
-    "command",
     "script",
     "cli"
   ]

@@ -1,1 +1,1 @@
-require("./bin/wait-run.js");
+require("./bin/just-wait.js");
