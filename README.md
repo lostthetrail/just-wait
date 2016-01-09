@@ -21,8 +21,8 @@ just-wait --pattern '*.*' && echo Done!    # waits for changes in cwd then proce
 ```
 
 ## Copyright 
-© 2016, Rick Wong. All rights reserved.
-© 2016, Stijn de Witt. Some rights reserved.
+* © 2016, Rick Wong. All rights reserved.
+* © 2016, Stijn de Witt. Some rights reserved.
 
 ## License
 * [BSD 3-Clause license](https://opensource.org/licenses/BSD-3-Clause)
