@@ -17,7 +17,7 @@ npm install --g just-wait
 ## Usage
 
 ```bash
-just-wait --pattern '*.*' && say hello    # waits for any change in cwd then runs once.
+just-wait --pattern '*.*' && echo Done!    # waits for changes in cwd then proceeds with echo.
 ```
 
 ## Copyright 
