@@ -20,6 +20,10 @@ npm install --g just-wait
 just-wait --pattern '*.*' && say hello    # waits for any change in cwd then runs once.
 ```
 
-## License
+## Copyright 
+© 2016, Rick Wong. All rights reserved.
+© 2016, Stijn de Witt. Some rights reserved.
 
-BSD 3-Clause license. Copyright © 2016, Rick Wong. All rights reserved.
+## License
+* [BSD 3-Clause license](https://opensource.org/licenses/BSD-3-Clause)
+* [Creative Commons Attribution 4.0 (CC-BY-4.0)](https://creativecommons.org/licenses/by/4.0/)
