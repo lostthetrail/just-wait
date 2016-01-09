@@ -12,8 +12,6 @@ var log = require('picolog');
 var  g=chalk.green, gb=chalk.green.bold,  r=chalk.red, rb=chalk.red.bold,
 	wh=chalk.white, wb=chalk.white.bold, gr=chalk.grey;
 
-var delay = 0;
-var timeout = 30;
 var done = false;
 
 var list = function(val) {
@@ -56,20 +54,19 @@ program.on('--help', function() {
  */
 program.parse(process.argv);
 
-/**
- * Set delay and timeout params
- */
-delay = program.delay || 0;
-timeout = program.timeout || 30;
-silent = program.silent || false;
+var
+delay = program.delay || 0,
+timeout = program.timeout || 30,
+silent = program.silent || false,
+pattern = program.pattern;
 
 if (!silent) {
-	log.warn(wb('Waiting ') + wh('for %s (max %d seconds)'), program.pattern, timeout);
+	log.warn(wb('Waiting ') + wh('for %s (max %d seconds)'), pattern, timeout);
 }
 
 setTimeout(function(){
 	if (!silent) {
-		log.error(chalk.red.bold('Timed out ') + chalk.red('waiting for %s after %d seconds.'), program.pattern, timeout);
+		log.error(chalk.red.bold('Timed out ') + chalk.red('waiting for %s after %d seconds.'), pattern, timeout);
 	}
 	process.exit(1);
 }, timeout * 1000);
@@ -93,7 +90,7 @@ function stop(event, path) {
 
 	setTimeout(function() {
 		if (!silent) {
-			log.warn(chalk.green.bold('Ready. ') + chalk.green(path + ' ' + event));
+			log.warn(chalk.green.bold('Ready. ') + chalk.green(pattern + ' ' + event));
 		}
 		process.exit(0);
 	}, delay);
